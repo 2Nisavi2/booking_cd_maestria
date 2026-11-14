@@ -1,21 +1,42 @@
-# Modelamiento para Servicios de Hotelería · Hotel Booking Demand
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://cmspreprod.lasalle.edu.co/sites/default/files/2026-04/Versi%C3%B3n%20en%20blanco.png">
+    <img src="https://cmspreprod.lasalle.edu.co/sites/default/files/2026-04/Versi%C3%B3n%20en%20blanco.png" alt="Universidad de La Salle" width="320">
+  </picture>
+</p>
+
+<h1 align="center">🏨 Modelamiento para Servicios de Hotelería</h1>
+<p align="center"><b>Hotel Booking Demand · CRISP-DM · Maestría en Inteligencia Artificial</b></p>
+
+<p align="center">
+  <a href="https://web-production-f73c9957.up.railway.app/"><img src="https://img.shields.io/badge/Tablero-en%20l%C3%ADnea-006CE4?style=for-the-badge&logo=railway&logoColor=white" alt="Tablero en línea"></a>
+  <img src="https://img.shields.io/badge/Python-3.13-003580?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.13">
+  <img src="https://img.shields.io/badge/Dash-Plotly-003580?style=for-the-badge&logo=plotly&logoColor=white" alt="Dash">
+  <img src="https://img.shields.io/badge/XGBoost-SHAP-FEBB02?style=for-the-badge&logoColor=black" alt="XGBoost y SHAP">
+</p>
+
+---
+
+## 📌 Descripción
 
 Proyecto de ciencia de datos (Maestría en Inteligencia Artificial, Universidad de La Salle) desarrollado
 con la metodología **CRISP-DM** sobre el dataset *Hotel Booking Demand*. El repositorio contiene:
 
-1. **Módulos de entrenamiento** ejecutables desde la terminal (`python main.py`), con logs de cada etapa.
+1. 🧠 **Módulos de entrenamiento** ejecutables desde la terminal (`python main.py`), con logs de cada etapa.
    Entrenan tres modelos y eligen los campeones con la estrategia SHAP + Pareto:
-   - **Anticipación** de la reserva (`lead_time`, regresión).
-   - **Propensión a cancelar** (`is_canceled`, clasificación).
-   - **Segmentación** de reservas por comportamiento (clustering).
-2. **Tablero en Dash** que cuenta el storytelling del proyecto y permite hacer **predicciones en tiempo
+   - ⏱️ **Anticipación** de la reserva (`lead_time`, regresión).
+   - ❌ **Propensión a cancelar** (`is_canceled`, clasificación).
+   - 👥 **Segmentación** de reservas por comportamiento (clustering).
+2. 📊 **Tablero en Dash** que cuenta el storytelling del proyecto y permite hacer **predicciones en tiempo
    real** con los modelos campeones. Se publica en **Railway**.
 
-Autor: Diego Nicolás Ávila Moreno.
+🔗 **Tablero en línea:** https://web-production-f73c9957.up.railway.app/
+
+👤 **Autor:** Diego Nicolás Ávila Moreno.
 
 ---
 
-## Estructura
+## 🗂️ Estructura
 
 ```
 ├── main.py                    # CLI del entrenamiento
@@ -49,18 +70,20 @@ Autor: Diego Nicolás Ávila Moreno.
 └── Procfile                   # comando de arranque en Railway
 ```
 
-## 1. Instalación
+## ⚙️ 1. Instalación
+
+> 💡 Se recomienda **Python 3.13** (el mismo que usa Railway, ver `.python-version`).
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate            # Windows: .venv\Scripts\activate
+source .venv/bin/activate            # Windows (PowerShell): .venv\Scripts\Activate.ps1
 pip install -r requirements-train.txt
 ```
 
 Descarga `hotel_bookings.csv` desde
 [Kaggle](https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand) y ubícalo en `data/raw/`.
 
-## 2. Entrenamiento desde la terminal
+## 🚀 2. Entrenamiento desde la terminal
 
 ```bash
 python main.py                                    # todas las tareas (≈ 10-20 min)
@@ -74,6 +97,8 @@ python main.py --help
 
 Tareas: `eda`, `lead_time`, `cancelacion`, `segmentacion` (o `todas`). Siempre se ejecuta antes el
 preprocesamiento común: carga → diagnóstico de faltantes → imputación → variables derivadas.
+
+### 📝 Logs
 
 Cada etapa registra su inicio, su fin y su duración; cada modelo registra sus métricas al terminar:
 
@@ -91,7 +116,7 @@ Cada etapa registra su inicio, su fin y su duración; cada modelo registra sus m
 
 El log completo (nivel DEBUG, con las tablas detalladas) se guarda en `logs/entrenamiento_AAAAMMDD_HHMMSS.log`.
 
-### Artefactos que se exportan
+### 📦 Artefactos que se exportan
 
 | Carpeta | Contenido |
 |---|---|
@@ -103,7 +128,7 @@ El log completo (nivel DEBUG, con las tablas detalladas) se guarda en `logs/entr
 `metadata.json` guarda las variables del campeón, su tipo, rango y categorías, las métricas y las
 versiones de las librerías. El tablero usa esa información para construir y marcar el formulario.
 
-## 3. Tablero
+## 📊 3. Tablero
 
 ```bash
 pip install -r requirements.txt
@@ -114,18 +139,18 @@ Páginas (una por fase CRISP-DM):
 
 | Página | Contenido |
 |---|---|
-| El problema | Indicadores, demanda y tarifa por mes y hotel, objetivos |
-| Calidad de los datos | Faltantes y su tratamiento, duplicados, fuga de información |
-| Qué explica la cancelación | Tasas por factor, asociación, antelación y tarifa por grupo, composición |
-| Predicción de cancelación | Simulador, comparación de modelos, importancia SHAP (Pareto), ROC, calibración, umbral interactivo |
-| Predicción de anticipación | Simulador, comparación, importancia SHAP, real vs. predicho |
-| Segmentos de clientes | Perfiles, rasgos (z-scores), PCA, reglas, asignador de segmento |
-| Recomendaciones | Usos, limitaciones y próximos pasos |
+| 🏁 El problema | Indicadores, demanda y tarifa por mes y hotel, objetivos |
+| 🧹 Calidad de los datos | Faltantes y su tratamiento, duplicados, fuga de información |
+| 🔍 Qué explica la cancelación | Tasas por factor, asociación, antelación y tarifa por grupo, composición |
+| ❌ Predicción de cancelación | Simulador, comparación de modelos, importancia SHAP (Pareto), ROC, calibración, umbral interactivo |
+| ⏱️ Predicción de anticipación | Simulador, comparación, importancia SHAP, real vs. predicho |
+| 👥 Segmentos de clientes | Perfiles, rasgos (z-scores), PCA, reglas, asignador de segmento |
+| ✅ Recomendaciones | Usos, limitaciones y próximos pasos |
 
 SHAP se calcula **solo durante el entrenamiento**; el tablero muestra la importancia como gráfica
 y no necesita la librería `shap`, lo que reduce la memoria en Railway.
 
-## 4. Publicación en Railway
+## ☁️ 4. Publicación en Railway
 
 1. Entrena con `python main.py` (con `xgboost` y `shap` instalados) y verifica con `pytest`.
 2. Sube el repositorio a GitHub **incluyendo la carpeta `artifacts/`** (el CSV y los logs se ignoran).
@@ -136,14 +161,14 @@ y no necesita la librería `shap`, lo que reduce la memoria en Railway.
 
 Recomendaciones:
 
-- **Versiones:** `scikit-learn`, `xgboost`, `pandas` y `numpy` de `requirements.txt` deben coincidir con
+- 🔒 **Versiones:** `scikit-learn`, `xgboost`, `pandas` y `numpy` de `requirements.txt` deben coincidir con
   las del entrenamiento (ver `"versiones"` en `metadata.json`). Al arrancar, el tablero imprime un aviso
   si no coinciden.
-- **Tamaño de los modelos:** con XGBoost como campeón los modelos pesan pocos MB. Si el campeón resulta
+- 💾 **Tamaño de los modelos:** con XGBoost como campeón los modelos pesan pocos MB. Si el campeón resulta
   ser Random Forest (por ejemplo, si no está instalado `xgboost`), cada modelo pesa ≈ 60 MB y consume más
   memoria; GitHub rechaza archivos de más de 100 MB (el log avisa si se supera).
 
-## 5. Pruebas
+## 🧪 5. Pruebas
 
 ```bash
 pytest -q
@@ -152,7 +177,7 @@ pytest -q
 Verifican las variables derivadas, la exclusión de variables con fuga y, si existen artefactos, que
 los modelos carguen y predigan valores válidos.
 
-## Notas sobre la adaptación del notebook
+## 📝 Notas sobre la adaptación del notebook
 
 - Los `print`/`display` del notebook se reemplazaron por logging y los gráficos de matplotlib por
   artefactos que grafica el tablero.
@@ -163,5 +188,7 @@ los modelos carguen y predigan valores válidos.
 - La imputación MICE usa solo predictores numéricos; en este dataset no se activa (country se imputa con
   clasificador y children con la moda).
 
-Datos: António, N., de Almeida, A. y Nunes, L. (2019). *Hotel booking demand datasets*. Data in Brief, 22,
+## 📚 Fuente de datos
+
+António, N., de Almeida, A. y Nunes, L. (2019). *Hotel booking demand datasets*. Data in Brief, 22,
 41-49. Licencia CC BY 4.0.
