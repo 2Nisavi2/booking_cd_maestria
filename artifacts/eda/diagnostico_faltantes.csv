@@ -1,0 +1,5 @@
+variable,n_faltantes,pct_faltantes,auc_prediccion_faltante,variables_asociadas,mecanismo_probable,recomendacion
+company,112593,94.3069,,,Estructural (no aplica),"El NA significa ausencia: codificar (0 / 'Sin dato') y crear indicador binario. Con >40% NA, usar solo el indicador."
+agent,16340,13.6862,,,Estructural (no aplica),El NA significa ausencia: codificar (0 / 'Sin dato') y crear indicador binario.
+country,488,0.4087,0.955,"agent, adults, adr, lead_time, previous_bookings_not_canceled",MAR (probable),"Imputación multivariada usando: agent, adults, adr, lead_time, previous_bookings_not_canceled"
+children,4,0.0034,,,No evaluable (4 faltantes),Muy pocos casos: imputar con mediana/moda.

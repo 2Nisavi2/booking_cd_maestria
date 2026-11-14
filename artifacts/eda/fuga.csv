@@ -1,0 +1,16 @@
+variable,auc_univariado,accion,motivo
+reservation_status,1.0,Excluida,Es el resultado de la reserva (Canceled / Check-Out)
+reservation_status_date,0.765,Excluida,Se registra al cerrar la reserva
+assigned_room_type,0.601,Excluida,Se conoce al llegar el huésped
+room_changed,0.584,Excluida,Se conoce al llegar el huésped
+needs_parking,0.549,Excluida,Probablemente se registra al llegar (0 % de cancelación)
+required_car_parking_spaces,0.549,Excluida,Probablemente se registra al llegar (0 % de cancelación)
+agent,0.714,Conservada,Predictor legítimo (se conoce al reservar)
+country,0.696,Conservada,Predictor legítimo (se conoce al reservar)
+lead_time,0.689,Conservada,Predictor legítimo (se conoce al reservar)
+deposit_type,0.663,Conservada,Predictor legítimo (se conoce al reservar)
+total_of_special_requests,0.635,Conservada,Predictor legítimo (se conoce al reservar)
+market_segment,0.635,Conservada,Predictor legítimo (se conoce al reservar)
+previous_cancel_rate,0.564,Conservada,Predictor legítimo (se conoce al reservar)
+customer_type,0.56,Conservada,Predictor legítimo (se conoce al reservar)
+adr,0.53,Conservada,Predictor legítimo (se conoce al reservar)

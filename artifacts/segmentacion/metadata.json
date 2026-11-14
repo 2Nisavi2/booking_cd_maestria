@@ -1,0 +1,53 @@
+{
+  "tarea": "segmentacion",
+  "campeon": {
+    "metodo": "K-Means",
+    "parametro": "k=5",
+    "k": 5
+  },
+  "variables": [
+    "lead_time_log",
+    "noches_log",
+    "prop_fin_semana",
+    "adr_huesped_log",
+    "solicitudes"
+  ],
+  "nombres": {
+    "0": "Planificadores de estancia larga",
+    "1": "Viajeros de negocios / última hora",
+    "2": "Vacacionistas exigentes / premium",
+    "3": "Escapadas de fin de semana",
+    "4": "Estancias de cortesía / clientes internos"
+  },
+  "metricas": {
+    "silueta_muestra": 0.27490929901627464,
+    "davies_bouldin": 1.1118753415430347,
+    "calinski": 2373.4789887233446,
+    "silueta_global": 0.27102418995620453,
+    "mal_ubicadas_pct": 2.87,
+    "exactitud_arbol": 0.9086520268333237,
+    "n_reservas": 87205
+  },
+  "reglas_arbol": "|--- solicitudes_especiales <= 1.50\n|   |--- noches <= 2.50\n|   |   |--- prop_fin_semana <= 0.25\n|   |   |   |--- adr_por_huesped <= 6.50\n|   |   |   |   |--- class: 4\n|   |   |   |--- adr_por_huesped >  6.50\n|   |   |   |   |--- class: 1\n|   |   |--- prop_fin_semana >  0.25\n|   |   |   |--- lead_time <= 104.50\n|   |   |   |   |--- class: 3\n|   |   |   |--- lead_time >  104.50\n|   |   |   |   |--- class: 0\n|   |--- noches >  2.50\n|   |   |--- prop_fin_semana <= 0.58\n|   |   |   |--- lead_time <= 12.50\n|   |   |   |   |--- class: 1\n|   |   |   |--- lead_time >  12.50\n|   |   |   |   |--- class: 0\n|   |   |--- prop_fin_semana >  0.58\n|   |   |   |--- lead_time <= 192.50\n|   |   |   |   |--- class: 3\n|   |   |   |--- lead_time >  192.50\n|   |   |   |   |--- class: 0\n|--- solicitudes_especiales >  1.50\n|   |--- prop_fin_semana <= 0.83\n|   |   |--- lead_time <= 5.50\n|   |   |   |--- prop_fin_semana <= 0.08\n|   |   |   |   |--- class: 1\n|   |   |   |--- prop_fin_semana >  0.08\n|   |   |   |   |--- class: 2\n|   |   |--- lead_time >  5.50\n|   |   |   |--- noches <= 1.50\n|   |   |   |   |--- class: 2\n|   |   |   |--- noches >  1.50\n|   |   |   |   |--- class: 2\n|   |--- prop_fin_semana >  0.83\n|   |   |--- lead_time <= 34.50\n|   |   |   |--- adr_por_huesped <= 49.02\n|   |   |   |   |--- class: 3\n|   |   |   |--- adr_por_huesped >  49.02\n|   |   |   |   |--- class: 3\n|   |   |--- lead_time >  34.50\n|   |   |   |--- class: 3\n",
+  "importancia_arbol": {
+    "prop_fin_semana": 0.303,
+    "noches": 0.288,
+    "solicitudes_especiales": 0.264,
+    "lead_time": 0.107,
+    "adr_por_huesped": 0.038
+  },
+  "varianza_pca": [
+    0.30746283188500984,
+    0.20064178102308675
+  ],
+  "modo_rapido": false,
+  "versiones": {
+    "python": "3.13.18",
+    "scikit-learn": "1.9.1",
+    "xgboost": null,
+    "pandas": "3.0.5",
+    "numpy": "2.5.3",
+    "shap": null,
+    "joblib": "1.6.0"
+  }
+}

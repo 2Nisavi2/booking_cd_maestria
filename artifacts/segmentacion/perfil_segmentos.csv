@@ -1,0 +1,6 @@
+segmento,nombre,n,pct,lead_time_mediana,noches_mediana,adr_mediana,solicitudes_media,prop_fin_semana_media,con_ninos_pct,tasa_cancelacion_pct,resort_pct,segmento_mercado_principal,portugal_pct
+0,Planificadores de estancia larga,38341,44.0,103.0,4.0,99.0,0.41,0.259,10.6,35.9,41.5,Online TA,23.9
+1,Viajeros de negocios / última hora,22482,25.8,8.0,1.0,94.5,0.46,0.019,7.8,19.7,38.7,Online TA,45.7
+2,Vacacionistas exigentes / premium,12384,14.2,74.0,4.0,117.0,2.24,0.25,17.3,22.2,38.0,Online TA,22.6
+3,Escapadas de fin de semana,12151,13.9,18.0,2.0,97.0,0.51,0.764,8.3,23.2,31.6,Online TA,33.3
+4,Estancias de cortesía / clientes internos,1847,2.1,5.0,1.0,0.0,0.61,0.14,8.0,13.2,42.3,Complementary,79.6

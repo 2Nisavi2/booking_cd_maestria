@@ -1,0 +1,25 @@
+hotel,arrival_date_month,reservas,tasa_cancelacion,adr_mediana,lead_time_mediana,mes_num,mes
+City Hotel,January,3736,39.66809421841542,80.0,32.0,1,Enero
+City Hotel,February,4965,38.28801611278953,80.0,30.0,2,Febrero
+City Hotel,March,6458,36.94642304118923,88.0,51.0,3,Marzo
+City Hotel,April,7480,46.32352941176471,105.0,87.0,4,Abril
+City Hotel,May,8232,44.37560738581146,120.0,99.0,5,Mayo
+City Hotel,June,7894,44.69217126931847,117.37,113.0,6,Junio
+City Hotel,July,8088,40.875370919881306,107.1,141.0,7,Julio
+City Hotel,August,8983,40.097962818657464,109.0,117.0,8,Agosto
+City Hotel,September,7400,42.027027027027025,107.0,72.0,9,Septiembre
+City Hotel,October,7605,42.97172912557528,99.87,76.0,10,Octubre
+City Hotel,November,4357,38.12256139545559,85.0,51.0,11,Noviembre
+City Hotel,December,4132,42.110358180058086,85.0,40.0,12,Diciembre
+Resort Hotel,January,2193,14.819881440948473,47.6,5.0,1,Enero
+Resort Hotel,February,3103,25.620367386400254,51.0,17.0,2,Febrero
+Resort Hotel,March,3336,22.871702637889687,55.6,30.5,3,Marzo
+Resort Hotel,April,3609,29.343308395677475,75.0,65.0,4,Abril
+Resort Hotel,May,3559,28.772127001966847,73.0,102.0,5,Mayo
+Resort Hotel,June,3045,33.07060755336617,105.0,133.0,6,Junio
+Resort Hotel,July,4573,31.401705663678108,152.5,93.0,7,Julio
+Resort Hotel,August,4894,33.44912137310993,188.42000000000002,81.0,8,Agosto
+Resort Hotel,September,3108,32.36808236808237,86.0,167.0,9,Septiembre
+Resort Hotel,October,3555,27.51054852320675,58.0,69.0,10,Octubre
+Resort Hotel,November,2437,18.916700861715224,45.0,24.0,11,Noviembre
+Resort Hotel,December,2648,23.82930513595166,57.864999999999995,31.0,12,Diciembre

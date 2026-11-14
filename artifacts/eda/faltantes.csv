@@ -1,0 +1,5 @@
+variable,n_faltantes,pct_faltantes,tipo
+company,112593,94.3069,float64
+agent,16340,13.6862,float64
+country,488,0.4087,str
+children,4,0.0034,float64

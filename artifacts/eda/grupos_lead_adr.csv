@@ -1,0 +1,17 @@
+categoria,lead_time_mediana,adr_mediana,n,variable
+Aviation,3.0,95.0,237.0,Segmento
+Complementary,3.0,0.0,743.0,Segmento
+Corporate,7.0,65.0,5295.0,Segmento
+Direct,16.0,105.0,12606.0,Segmento
+Groups,162.0,70.0,19811.0,Segmento
+Offline TA/TO,109.0,85.5,24219.0,Segmento
+Online TA,58.0,109.8,56477.0,Segmento
+No Deposit,56.0,95.5,104641.0,Depósito
+Non Refund,183.0,86.0,14587.0,Depósito
+Refundable,169.0,66.0,162.0,Depósito
+Contract,114.0,82.87,4076.0,Tipo de cliente
+Group,12.0,75.0,577.0,Tipo de cliente
+Transient,61.0,99.0,89613.0,Tipo de cliente
+Transient-Party,102.0,81.0,25124.0,Tipo de cliente
+Efectiva,45.0,,,Resultado
+Cancelada,113.0,,,Resultado

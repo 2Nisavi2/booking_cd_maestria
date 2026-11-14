@@ -1,0 +1,46 @@
+# Configuración del proceso de entrenamiento
+# Los valores por defecto reproducen los del notebook de la Entrega III.
+
+general:
+  semilla: 42
+  datos: data/raw/hotel_bookings.csv
+  artefactos: artifacts
+  logs: logs
+
+preprocesamiento:
+  # Variables cuyo NA significa "no aplica" (reserva sin agencia / sin empresa)
+  estructurales: [agent, company]
+  # Describen el desenlace de la reserva: no se usan para explicar ni imputar
+  excluir: [reservation_status, reservation_status_date]
+
+lead_time:
+  test_size: 0.2
+  umbral_shap: 0.90        # Pareto: variables hasta el 90 % de la importancia
+  n_muestra_shap: 2000
+  criterio: MAE_test
+  tolerancia: 0.02         # modelos a menos del 2 % del mejor se consideran empatados
+
+cancelacion:
+  test_size: 0.2
+  umbral_decision: 0.5
+  max_filas_svm: 20000
+  umbral_shap: 0.90
+  n_muestra_shap: 2000
+  criterio: AUC_test
+  tolerancia: 0.01
+
+segmentacion:
+  k_min: 2
+  k_max: 8
+  n_muestra: 8000
+  min_cluster_pct: 1.5
+  max_ruido_pct: 10.0
+  n_silueta: 10000
+
+# Modo rápido (python main.py --rapido): reduce árboles y muestras para pruebas
+rapido:
+  factor_arboles: 0.2
+  n_muestra_shap: 500
+  n_muestra_segmentacion: 3000
+  n_silueta: 3000
+  max_filas_svm: 5000

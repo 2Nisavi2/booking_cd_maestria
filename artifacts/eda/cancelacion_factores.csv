@@ -1,0 +1,18 @@
+factor,grupo,tasa_cancelacion,n
+Depósito no reembolsable,riesgo,99.36244601357373,14587
+Con cancelaciones previas,riesgo,91.64096236890809,6484
+Antelación > 1 año,riesgo,67.66200762388819,3148
+Estuvo en lista de espera,riesgo,63.79123850730124,3698
+Segmento Groups,riesgo,61.062036242491544,19811
+Reserva desde Portugal,riesgo,56.63511010495987,48590
+Sin solicitudes especiales,riesgo,47.720356096589775,70318
+City Hotel,riesgo,41.72696331778646,79330
+Canal agencias (TA/TO),riesgo,41.025850618166956,97870
+Cliente Transient,riesgo,40.746320288351015,89613
+Resort Hotel,protector,27.763354967548675,40060
+Con solicitudes especiales,protector,21.7394848386045,49072
+Canal directo,protector,17.459883919426424,14645
+Reserva modificada,protector,15.672715202478424,18076
+Huésped repetido,protector,14.488188976377952,3810
+Antelación < 7 días,protector,9.39451534075482,18415
+Solicita parqueadero,protector,0.0,7416

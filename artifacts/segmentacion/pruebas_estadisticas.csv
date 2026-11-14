@@ -1,0 +1,23 @@
+variable,tipo,prueba,estadistico,p_valor,efecto,medida,pares_distintos_%
+prop_fin_semana,numérica,Kruskal-Wallis,49604.70097,0.0,0.56882,épsilon²,90.0
+noches,numérica,Kruskal-Wallis,45997.25595,0.0,0.52745,épsilon²,100.0
+solicitudes_especiales,numérica,Kruskal-Wallis,36553.86526,0.0,0.41915,épsilon²,40.0
+lead_time,numérica,Kruskal-Wallis,32823.72481,0.0,0.37637,épsilon²,90.0
+market_segment,categórica,chi2,39343.24937,0.0,0.33584,V de Cramér,
+pais,categórica,chi2,5546.08595,0.0,0.25219,V de Cramér,
+distribution_channel,categórica,chi2,6810.27159,0.0,0.13973,V de Cramér,
+mes_llegada,categórica,chi2,3383.34648,0.0,0.09849,V de Cramér,
+adr,numérica,Kruskal-Wallis,7033.34329,0.0,0.08061,épsilon²,70.0
+meal,categórica,chi2,1957.78879,0.0,0.07492,V de Cramér,
+adr_por_huesped,numérica,Kruskal-Wallis,6301.06895,0.0,0.07221,épsilon²,40.0
+customer_type,categórica,chi2,1230.22343,0.0,0.06857,V de Cramér,
+hotel,categórica,chi2,395.43128,0.0,0.06734,V de Cramér,
+huespedes,numérica,Kruskal-Wallis,5532.65388,0.0,0.0634,épsilon²,70.0
+huesped_repetido,numérica,Kruskal-Wallis,4474.82119,0.0,0.05127,épsilon²,40.0
+deposit_type,categórica,chi2,435.59028,0.0,0.04998,V de Cramér,
+cancelada,numérica,Kruskal-Wallis,2533.63959,0.0,0.02901,épsilon²,30.0
+con_ninos,numérica,Kruskal-Wallis,870.3096,0.0,0.00993,épsilon²,0.0
+parqueadero,numérica,Kruskal-Wallis,722.99132,0.0,0.00825,épsilon²,0.0
+resort,numérica,Kruskal-Wallis,395.42675,0.0,0.00449,épsilon²,0.0
+dias_lista_espera,numérica,Kruskal-Wallis,281.27325,0.0,0.00318,épsilon²,0.0
+cambios_reserva,numérica,Kruskal-Wallis,272.1319,0.0,0.00307,épsilon²,0.0

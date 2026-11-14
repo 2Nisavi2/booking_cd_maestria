@@ -1,0 +1,5 @@
+variable,mecanismo,n_imputados,pct_imputado,metodo,variables_nuevas,calidad,efecto_en_distribucion
+company,Estructural (no aplica),112593,94.3069,Indicador binario 'company_registrado' (1 = tiene company); se elimina la variable original,company_registrado,,company_registrado: 5.69% con valor 1
+agent,Estructural (no aplica),16340,13.6862,Relleno con 0 + indicador 'agent_faltante',agent_faltante,,media 86.693 -> 74.828; desv. 110.775 -> 107.142
+country,MAR (probable),488,0.4087,"Clasificador HistGradientBoosting con agent, adults, adr, lead_time, previous_bookings_not_canceled",,validación: accuracy=0.496 vs. moda=0.424,moda 'PRT' 40.9% -> 41.1%; TVD = 0.23%
+children,No evaluable (4 faltantes),4,0.0034,Moda (0.0),,,media 0.104 -> 0.104; desv. 0.399 -> 0.399

@@ -1,0 +1,19 @@
+{
+  "n_reservas": 119390,
+  "n_variables": 32,
+  "tasa_cancelacion": 37.041628277075134,
+  "tasa_cancelacion_sin_duplicados": 27.489816467572886,
+  "n_duplicados": 31994,
+  "pct_duplicados": 26.797889270458164,
+  "adr_mediana": 94.575,
+  "lead_time_mediana": 69.0,
+  "lead_time_media": 104.01141636652986,
+  "pct_agencias": 81.97503978557668,
+  "pct_repetidos": 3.191222045397437,
+  "pct_city": 66.44610101348522,
+  "cancelacion_hotel": {
+    "City Hotel": 41.72696331778646,
+    "Resort Hotel": 27.763354967548675
+  },
+  "periodo": "julio 2015 – agosto 2017"
+}
