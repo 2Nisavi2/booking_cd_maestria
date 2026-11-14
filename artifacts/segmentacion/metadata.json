@@ -37,17 +37,17 @@
     "adr_por_huesped": 0.038
   },
   "varianza_pca": [
-    0.30746283188500984,
-    0.20064178102308675
+    0.3074628318850102,
+    0.20064178102308658
   ],
   "modo_rapido": false,
   "versiones": {
-    "python": "3.13.18",
+    "python": "3.13.17",
     "scikit-learn": "1.9.1",
-    "xgboost": null,
-    "pandas": "3.0.5",
-    "numpy": "2.5.3",
-    "shap": null,
+    "xgboost": "3.4.1",
+    "pandas": "3.1.1",
+    "numpy": "2.5.4",
+    "shap": "0.54.1",
     "joblib": "1.6.0"
   }
 }

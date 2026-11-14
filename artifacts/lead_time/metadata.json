@@ -1,0 +1,458 @@
+{
+  "tarea": "lead_time",
+  "tipo": "regresion",
+  "target": "lead_time",
+  "fecha_entrenamiento": "2026-11-14T12:51:46",
+  "modo_rapido": false,
+  "semilla": 42,
+  "campeon": {
+    "modelo": "XGBoost",
+    "etapa": "Inicial",
+    "n_variables": 30
+  },
+  "justificacion": "Campeón: XGBoost (Inicial, 30 variables) con MAE_test = 31.290. Mejor valor observado: 31.290; 1 modelo(s) dentro de la tolerancia del 2%, se elige el de menos variables.",
+  "importancia": {
+    "metodo": "SHAP - TreeExplainer",
+    "modelo_base": "XGBoost"
+  },
+  "variables": [
+    "hotel",
+    "arrival_date_year",
+    "arrival_date_month",
+    "arrival_date_day_of_month",
+    "stays_in_weekend_nights",
+    "stays_in_week_nights",
+    "adults",
+    "children",
+    "babies",
+    "meal",
+    "country",
+    "market_segment",
+    "distribution_channel",
+    "is_repeated_guest",
+    "previous_cancellations",
+    "previous_bookings_not_canceled",
+    "reserved_room_type",
+    "deposit_type",
+    "agent",
+    "customer_type",
+    "adr",
+    "total_of_special_requests",
+    "company_registrado",
+    "arrival_weekday",
+    "arrival_is_weekend",
+    "weekend_ratio",
+    "has_kids",
+    "adr_per_guest",
+    "previous_cancel_rate",
+    "flag_adr_no_positivo"
+  ],
+  "especificacion": {
+    "hotel": {
+      "tipo": "categorica",
+      "categorias": [
+        "City Hotel",
+        "Resort Hotel"
+      ],
+      "moda": "City Hotel"
+    },
+    "arrival_date_year": {
+      "tipo": "numerica",
+      "min": 2015.0,
+      "max": 2017.0,
+      "p01": 2015.0,
+      "p99": 2017.0,
+      "mediana": 2016.0
+    },
+    "arrival_date_month": {
+      "tipo": "categorica",
+      "categorias": [
+        "August",
+        "July",
+        "May",
+        "April",
+        "June",
+        "March",
+        "October",
+        "September",
+        "February",
+        "December",
+        "November",
+        "January"
+      ],
+      "moda": "August"
+    },
+    "arrival_date_day_of_month": {
+      "tipo": "numerica",
+      "min": 1.0,
+      "max": 31.0,
+      "p01": 1.0,
+      "p99": 31.0,
+      "mediana": 16.0
+    },
+    "stays_in_weekend_nights": {
+      "tipo": "numerica",
+      "min": 0.0,
+      "max": 19.0,
+      "p01": 0.0,
+      "p99": 4.0,
+      "mediana": 1.0
+    },
+    "stays_in_week_nights": {
+      "tipo": "numerica",
+      "min": 0.0,
+      "max": 50.0,
+      "p01": 0.0,
+      "p99": 10.0,
+      "mediana": 2.0
+    },
+    "adults": {
+      "tipo": "numerica",
+      "min": 0.0,
+      "max": 55.0,
+      "p01": 1.0,
+      "p99": 3.0,
+      "mediana": 2.0
+    },
+    "children": {
+      "tipo": "numerica",
+      "min": 0.0,
+      "max": 10.0,
+      "p01": 0.0,
+      "p99": 2.0,
+      "mediana": 0.0
+    },
+    "babies": {
+      "tipo": "numerica",
+      "min": 0.0,
+      "max": 10.0,
+      "p01": 0.0,
+      "p99": 1.0,
+      "mediana": 0.0
+    },
+    "meal": {
+      "tipo": "categorica",
+      "categorias": [
+        "BB",
+        "SC",
+        "HB",
+        "Undefined",
+        "FB"
+      ],
+      "moda": "BB"
+    },
+    "country": {
+      "tipo": "categorica",
+      "categorias": [
+        "PRT",
+        "GBR",
+        "FRA",
+        "ESP",
+        "DEU",
+        "IRL",
+        "ITA",
+        "BEL",
+        "BRA",
+        "NLD",
+        "USA",
+        "CHE",
+        "CN",
+        "AUT",
+        "CHN",
+        "SWE",
+        "POL",
+        "RUS",
+        "NOR",
+        "ROU",
+        "FIN",
+        "DNK",
+        "AUS",
+        "ISR",
+        "AGO",
+        "LUX",
+        "MAR",
+        "ARG",
+        "HUN",
+        "TUR",
+        "JPN",
+        "IND",
+        "CZE",
+        "GRC",
+        "KOR",
+        "DZA",
+        "HRV",
+        "IRN",
+        "ZAF",
+        "EST",
+        "LTU",
+        "BGR",
+        "MEX",
+        "COL",
+        "NZL",
+        "UKR",
+        "LVA",
+        "CHL",
+        "SVK",
+        "ARE",
+        "MOZ",
+        "SAU",
+        "SRB",
+        "SVN",
+        "TWN",
+        "THA",
+        "CYP",
+        "PHL",
+        "SGP",
+        "EGY"
+      ],
+      "moda": "PRT"
+    },
+    "market_segment": {
+      "tipo": "categorica",
+      "categorias": [
+        "Online TA",
+        "Offline TA/TO",
+        "Direct",
+        "Groups",
+        "Corporate",
+        "Complementary",
+        "Aviation",
+        "Undefined"
+      ],
+      "moda": "Online TA"
+    },
+    "distribution_channel": {
+      "tipo": "categorica",
+      "categorias": [
+        "TA/TO",
+        "Direct",
+        "Corporate",
+        "GDS",
+        "Undefined"
+      ],
+      "moda": "TA/TO"
+    },
+    "is_repeated_guest": {
+      "tipo": "numerica",
+      "min": 0.0,
+      "max": 1.0,
+      "p01": 0.0,
+      "p99": 1.0,
+      "mediana": 0.0
+    },
+    "previous_cancellations": {
+      "tipo": "numerica",
+      "min": 0.0,
+      "max": 26.0,
+      "p01": 0.0,
+      "p99": 1.0,
+      "mediana": 0.0
+    },
+    "previous_bookings_not_canceled": {
+      "tipo": "numerica",
+      "min": 0.0,
+      "max": 72.0,
+      "p01": 0.0,
+      "p99": 5.0,
+      "mediana": 0.0
+    },
+    "reserved_room_type": {
+      "tipo": "categorica",
+      "categorias": [
+        "A",
+        "D",
+        "E",
+        "F",
+        "G",
+        "B",
+        "C",
+        "H",
+        "P",
+        "L"
+      ],
+      "moda": "A"
+    },
+    "deposit_type": {
+      "tipo": "categorica",
+      "categorias": [
+        "No Deposit",
+        "Non Refund",
+        "Refundable"
+      ],
+      "moda": "No Deposit"
+    },
+    "agent": {
+      "tipo": "categorica",
+      "categorias": [
+        "9",
+        "240",
+        "0",
+        "14",
+        "7",
+        "250",
+        "241",
+        "28",
+        "8",
+        "1",
+        "6",
+        "40",
+        "314",
+        "242",
+        "83",
+        "85",
+        "243",
+        "171",
+        "27",
+        "22",
+        "3",
+        "11",
+        "15",
+        "177",
+        "196",
+        "138",
+        "96",
+        "16",
+        "5",
+        "229",
+        "10",
+        "42",
+        "115",
+        "156",
+        "37",
+        "175",
+        "195",
+        "86",
+        "21",
+        "26",
+        "251",
+        "273",
+        "143",
+        "168",
+        "134",
+        "152",
+        "315",
+        "147",
+        "2",
+        "95",
+        "298",
+        "410",
+        "19",
+        "146",
+        "142",
+        "94",
+        "330",
+        "89",
+        "20",
+        "12"
+      ],
+      "moda": "9"
+    },
+    "customer_type": {
+      "tipo": "categorica",
+      "categorias": [
+        "Transient",
+        "Transient-Party",
+        "Contract",
+        "Group"
+      ],
+      "moda": "Transient"
+    },
+    "adr": {
+      "tipo": "numerica",
+      "min": -6.38,
+      "max": 5400.0,
+      "p01": 0.0,
+      "p99": 263.0,
+      "mediana": 99.0
+    },
+    "total_of_special_requests": {
+      "tipo": "numerica",
+      "min": 0.0,
+      "max": 5.0,
+      "p01": 0.0,
+      "p99": 3.0,
+      "mediana": 1.0
+    },
+    "company_registrado": {
+      "tipo": "numerica",
+      "min": 0.0,
+      "max": 1.0,
+      "p01": 0.0,
+      "p99": 1.0,
+      "mediana": 0.0
+    },
+    "arrival_weekday": {
+      "tipo": "numerica",
+      "min": 0.0,
+      "max": 6.0,
+      "p01": 0.0,
+      "p99": 6.0,
+      "mediana": 3.0
+    },
+    "arrival_is_weekend": {
+      "tipo": "numerica",
+      "min": 0.0,
+      "max": 1.0,
+      "p01": 0.0,
+      "p99": 1.0,
+      "mediana": 0.0
+    },
+    "weekend_ratio": {
+      "tipo": "numerica",
+      "min": 0.0,
+      "max": 1.0,
+      "p01": 0.0,
+      "p99": 1.0,
+      "mediana": 0.25
+    },
+    "has_kids": {
+      "tipo": "numerica",
+      "min": 0.0,
+      "max": 1.0,
+      "p01": 0.0,
+      "p99": 1.0,
+      "mediana": 0.0
+    },
+    "adr_per_guest": {
+      "tipo": "numerica",
+      "min": -3.19,
+      "max": 2700.0,
+      "p01": 0.0,
+      "p99": 152.0,
+      "mediana": 50.0
+    },
+    "previous_cancel_rate": {
+      "tipo": "numerica",
+      "min": 0.0,
+      "max": 1.0,
+      "p01": 0.0,
+      "p99": 1.0,
+      "mediana": 0.0
+    },
+    "flag_adr_no_positivo": {
+      "tipo": "numerica",
+      "min": 0.0,
+      "max": 1.0,
+      "p01": 0.0,
+      "p99": 0.0,
+      "mediana": 0.0
+    }
+  },
+  "metricas": {
+    "R2_test": 0.7077,
+    "MAE_test": 31.29,
+    "RMSE_test": 45.9068,
+    "MAE_baseline": 67.2656,
+    "n_train": 67842,
+    "n_test": 16961
+  },
+  "versiones": {
+    "python": "3.13.17",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "pandas": "3.1.1",
+    "numpy": "2.5.4",
+    "shap": "0.54.1",
+    "joblib": "1.6.0"
+  }
+}

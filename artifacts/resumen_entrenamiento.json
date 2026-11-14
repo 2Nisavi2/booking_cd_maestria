@@ -1,0 +1,33 @@
+{
+  "fecha": "2026-11-14T12:54:20",
+  "duracion_segundos": 290,
+  "modo_rapido": false,
+  "resultados": [
+    {
+      "tarea": "eda",
+      "tablas": 13
+    },
+    {
+      "tarea": "lead_time",
+      "campeon": "XGBoost",
+      "etapa": "Inicial",
+      "n_variables": 30,
+      "MAE_test": 31.29,
+      "R2_test": 0.708
+    },
+    {
+      "tarea": "cancelacion",
+      "campeon": "XGBoost",
+      "etapa": "SHAP 90%",
+      "n_variables": 16,
+      "AUC_test": 0.9,
+      "Brier": 0.1116
+    },
+    {
+      "tarea": "segmentacion",
+      "campeon": "K-Means (k=5)",
+      "silueta": 0.271,
+      "exactitud_arbol": 0.909
+    }
+  ]
+}

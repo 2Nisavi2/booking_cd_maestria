@@ -1,11 +1,12 @@
 # Dependencias del TABLERO (lo que instala Railway).
-# IMPORTANTE: scikit-learn, xgboost, pandas y numpy deben coincidir con las versiones usadas al
-# entrenar (ver "versiones" en artifacts/*/metadata.json). Si reentrenas con otras, actualízalas aquí.
+# Rangos flexibles para que pip encuentre ruedas precompiladas para tu versión de Python.
+# Después de entrenar, fija aquí las versiones exactas de pandas, numpy, scikit-learn, xgboost
+# y joblib que usaste (ver "versiones" en artifacts/*/metadata.json o `pip freeze`).
 dash>=2.17,<4
 plotly>=5.22,<7
 gunicorn>=22.0
-pandas==3.0.5
-numpy==2.5.3
-scikit-learn==1.9.1
+pandas>=2.1
+numpy>=1.26
+scikit-learn>=1.4
 xgboost>=2.1
 joblib>=1.4
