@@ -30,11 +30,17 @@ pio.templates["booking"] = go.layout.Template(
         font=dict(family=FUENTE, size=13, color=TEXTO),
         colorway=SECUENCIA,
         paper_bgcolor="white", plot_bgcolor="white",
-        title=dict(font=dict(size=15, color=TEXTO), x=0, xanchor="left"),
-        xaxis=dict(showgrid=False, linecolor=BORDE, ticks="outside", tickcolor=BORDE, zeroline=False),
-        yaxis=dict(gridcolor="#EEF0F3", linecolor=BORDE, zeroline=False),
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0, title_text=""),
-        margin=dict(l=10, r=10, t=50, b=10),
+        # Título arriba del todo (referido al contenedor, no al área del gráfico)
+        title=dict(font=dict(size=15, color=TEXTO), x=0, xanchor="left", xref="paper",
+                   y=0.98, yanchor="top", yref="container"),
+        # automargin: Plotly amplía el margen para que etiquetas y títulos de ejes no se recorten
+        xaxis=dict(showgrid=False, linecolor=BORDE, ticks="outside", tickcolor=BORDE, zeroline=False,
+                   automargin=True, title=dict(standoff=12)),
+        yaxis=dict(gridcolor="#EEF0F3", linecolor=BORDE, zeroline=False, automargin=True,
+                   title=dict(standoff=12)),
+        # Leyenda en la franja entre el título y el área del gráfico (margen superior amplio)
+        legend=dict(orientation="h", yanchor="bottom", y=1.01, xanchor="left", x=0, title_text=""),
+        margin=dict(l=20, r=30, t=95, b=20, pad=4),
         hoverlabel=dict(bgcolor="white", bordercolor=AZUL, font=dict(color=TEXTO)),
     )
 )
